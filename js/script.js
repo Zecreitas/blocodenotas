@@ -28,13 +28,13 @@ btnCloseNote.addEventListener('click', (evt)=>{
 btnSaveNote.addEventListener('click', (evt)=>{
     evt.preventDefault();
 
-    let dados = {
+    let data = {
         id: document.querySelector("#input-id").value,
         title: document.querySelector("#input-title").value,
         content: document.querySelector("#input-content").value,
         lastTime: new Date() .getTime(),
     }
-    btnSaveNote(data);
+    saveNote(data);
 });
 
 /*
@@ -65,7 +65,7 @@ const listNotes = () =>{
 }
 const loadNotes = () =>{
     let notes = localStorage.getItem("notes");
-    if(notes){
+    if(!notes){
         notes = [];
     }else{
         notes =JSON.parse(notes);
