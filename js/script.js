@@ -157,14 +157,12 @@ const showNote = (item) =>{
     excluir.addEventListener("click", (evt)=>{
         let resposta = prompt("Tem certeza? Sim ou Não");
         if(resposta == "Sim"){
-            evt.preventDefault();
             notes.style.display = 'flex';
             modalView.style.display = "none";
             modal.style.display = "none";
             localStorage.removeItem("notes");
         }
         else if(resposta == "sim"){
-            evt.preventDefault();
             notes.style.display = 'flex';
             modalView.style.display = "none";
             modal.style.display = "none";
